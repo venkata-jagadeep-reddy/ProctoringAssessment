@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment - ProctorAI</title>
+    <link rel="stylesheet" href="ass1.css">
+    <script defer src="ass1.js"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">ProctorAI</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="assessment.html" class="active">Assessment</a></li>
+        </ul>
+    </nav>
+
+    <!-- Assessment Container -->
+    <div class="assessment-container">
+        <h2>MCQ Assessment</h2>
+        <p class="timer">Time Left: <span id="time">10:00</span></p>
+
+        <form id="quiz-form">
+            <!-- Question 1 -->
+            <div class="question">
+                <h3>1. What does HTML stand for?</h3>
+                <label><input type="radio" name="q1" value="a"> Hyper Text Markup Language</label>
+                <label><input type="radio" name="q1" value="b"> High-Level Text Machine Learning</label>
+                <label><input type="radio" name="q1" value="c"> Hyperlink and Text Management Language</label>
+                <label><input type="radio" name="q1" value="d"> None of the above</label>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <h3>2. What is the correct syntax for referring to an external JavaScript file?</h3>
+                <label><input type="radio" name="q2" value="a"> `&lt;script name="script.js"&gt;` </label>
+                <label><input type="radio" name="q2" value="b"> `&lt;script src="script.js"&gt;`</label>
+                <label><input type="radio" name="q2" value="c"> `&lt;script href="script.js"&gt;`</label>
+                <label><input type="radio" name="q2" value="d"> None of the above</label>
+            </div>
+            <div class="question">
+                <h3>2. What is the correct HTML element for inserting a line break?</h3>
+                <label><input type="radio" name="q2" value="a"> &lt;br&gt;</label>
+                <label><input type="radio" name="q2" value="b"> &lt;lb&gt;</label>
+                <label><input type="radio" name="q2" value="c"> &lt;break&gt;</label>
+                <label><input type="radio" name="q2" value="d"> &lt;line&gt;</label>
+            </div>
+            
+            <div class="question">
+                <h3>3. Which HTML tag is used to define an unordered list?</h3>
+                <label><input type="radio" name="q3" value="a"> &lt;ul&gt;</label>
+                <label><input type="radio" name="q3" value="b"> &lt;ol&gt;</label>
+                <label><input type="radio" name="q3" value="c"> &lt;li&gt;</label>
+                <label><input type="radio" name="q3" value="d"> &lt;list&gt;</label>
+            </div>
+            
+            <div class="question">
+                <h3>4. What is the purpose of the &lt;meta&gt; tag in HTML?</h3>
+                <label><input type="radio" name="q4" value="a"> To define metadata about the document</label>
+                <label><input type="radio" name="q4" value="b"> To create a hyperlink</label>
+                <label><input type="radio" name="q4" value="c"> To add images</label>
+                <label><input type="radio" name="q4" value="d"> To define a table</label>
+            </div>
+            
+            <div class="question">
+                <h3>5. Which HTML element is used to display a scalar measurement within a range?</h3>
+                <label><input type="radio" name="q5" value="a"> &lt;gauge&gt;</label>
+                <label><input type="radio" name="q5" value="b"> &lt;progress&gt;</label>
+                <label><input type="radio" name="q5" value="c"> &lt;meter&gt;</label>
+                <label><input type="radio" name="q5" value="d"> &lt;range&gt;</label>
+            </div>
+            
+            <div class="question">
+                <h3>6. Which attribute specifies the URL of the page the hyperlink goes to?</h3>
+                <label><input type="radio" name="q6" value="a"> href</label>
+                <label><input type="radio" name="q6" value="b"> link</label>
+                <label><input type="radio" name="q6" value="c"> src</label>
+                <label><input type="radio" name="q6" value="d"> url</label>
+            </div>
+            
+            <div class="question">
+                <h3>7. What does the &lt;title&gt; element in HTML define?</h3>
+                <label><input type="radio" name="q7" value="a"> The heading of the page</label>
+                <label><input type="radio" name="q7" value="b"> The title shown in the browser's title bar or tab</label>
+                <label><input type="radio" name="q7" value="c"> The main heading of the page</label>
+                <label><input type="radio" name="q7" value="d"> The footer of the page</label>
+            </div>
+            
+            <div class="question">
+                <h3>8. Which HTML tag is used to create a table row?</h3>
+                <label><input type="radio" name="q8" value="a"> &lt;tr&gt;</label>
+                <label><input type="radio" name="q8" value="b"> &lt;td&gt;</label>
+                <label><input type="radio" name="q8" value="c"> &lt;th&gt;</label>
+                <label><input type="radio" name="q8" value="d"> &lt;table&gt;</label>
+            </div>
+            
+            <div class="question">
+                <h3>9. Which HTML element is used to define a footer for a document or section?</h3>
+                <label><input type="radio" name="q9" value="a"> &lt;bottom&gt;</label>
+                <label><input type="radio" name="q9" value="b"> &lt;section&gt;</label>
+                <label><input type="radio" name="q9" value="c"> &lt;footer&gt;</label>
+                <label><input type="radio" name="q9" value="d"> &lt;foot&gt;</label>
+            </div>
+            
+            <div class="question">
+                <h3>10. What is the correct HTML element for embedding a video?</h3>
+                <label><input type="radio" name="q10" value="a"> &lt;video&gt;</label>
+                <label><input type="radio" name="q10" value="b"> &lt;embed&gt;</label>
+                <label><input type="radio" name="q10" value="c"> &lt;movie&gt;</label>
+                <label><input type="radio" name="q10" value="d"> &lt;media&gt;</label>
+            </div>
+            
+
+            <!-- Submit Button -->
+            <button type="submit" class="auth-btn">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
