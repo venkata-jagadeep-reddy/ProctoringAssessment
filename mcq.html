@@ -174,7 +174,7 @@
                 { question: "Which HTML tag is used to define an unordered list?", options: ["<ul>", "<ol>", "<li>", "<list>"], name: "q2" },
                 { question: "Which attribute specifies the URL of a hyperlink?", options: ["href", "link", "src", "url"], name: "q3" },
                 { question: "Which HTML tag is used to create a table row?", options: ["<tr>", "<td>", "<th>", "<table>"], name: "q4" },
-                { question: "What does the <title> element define?", options: ["Heading of the page", "Title in browser tab", "Main heading", "Footer"], name: "q5" }
+                { question: "Which tag is present at the bottom of the page?", options: ["Heading of the page", "Title in browser tab", "Main heading", "Footer"], name: "q5" }
             ];
 
             let currentQuestionIndex = 0;
@@ -234,7 +234,7 @@
             });
 
             submitBtn.addEventListener("click", () => {
-                alert("Quiz submitted! Your answers: " + JSON.stringify(answers, null, 2));
+                alert("Quiz submitted!");
             });
 
             displayQuestion(currentQuestionIndex);
