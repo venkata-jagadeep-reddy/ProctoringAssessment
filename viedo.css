@@ -1,0 +1,125 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1c1c1c;
+    color: white;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    color: #f90;
+}
+
+/* Assessment Container */
+.assessment-container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.timer {
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+    margin-bottom: 15px;
+}
+
+/* Video Section */
+.video-section {
+    margin-bottom: 20px;
+}
+
+.video-warning {
+    font-size: 14px;
+    color: red;
+    margin-top: 5px;
+}
+
+/* Question Section */
+.question {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.question h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    padding: 8px;
+    background: #f8f8f8;
+    border-radius: 5px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+label:hover {
+    background: #e8e8e8;
+}
+
+/* Submit Button */
+.auth-btn {
+    width: 100%;
+    background: #f90;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.auth-btn:hover {
+    background: #e68a00;
+}
+
+.auth-btn:disabled {
+    background: gray;
+    cursor: not-allowed;
+}

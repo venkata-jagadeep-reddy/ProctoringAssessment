@@ -1,0 +1,66 @@
+html...
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Quiz</title>
+    <link rel="stylesheet" href="audio.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <nav>
+        <div class="logo">Quiz App</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">&#9776;</div>
+    </nav>
+
+    <div class="assessment-container">
+        <h2>Listen to the audio carefully and answer the following questions</h2>
+        <div id="time" class="timer">10:00</div>
+
+        <!-- Audio Player -->
+        <audio id="quiz-audio" controls>
+            <source src="WEB DEVELOPMENT COMPLETE ROADMAP FOR BEGINNERS.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Quiz Form -->
+        <form id="quiz-form">
+            <!-- Questions for Audio 1 -->
+            <div class="question" data-audio="audio1.mp3">
+                <h3>Question 1: What is the main topic of the audio?</h3>
+                <label><input type="radio" name="q1" value="A"> Option A</label>
+                <label><input type="radio" name="q1" value="B"> Option B</label>
+                <label><input type="radio" name="q1" value="C"> Option C</label>
+                <label><input type="radio" name="q1" value="D"> Option D</label>
+            </div>
+            <!-- Repeat for Questions 2-5 for Audio 1 -->
+
+            <!-- Questions for Audio 2 -->
+            <div class="question" data-audio="audio2.mp3" style="display:none;">
+                <h3>Question 6: What is the main topic of the audio?</h3>
+                <label><input type="radio" name="q6" value="A"> Option A</label>
+                <label><input type="radio" name="q6" value="B"> Option B</label>
+                <label><input type="radio" name="q6" value="C"> Option C</label>
+                <label><input type="radio" name="q6" value="D"> Option D</label>
+            </div>
+            <!-- Repeat for Questions 7-10 for Audio 2 -->
+
+            <!-- Repeat the structure for Audios 3-5 -->
+            <button type="button" id="prev-btn" class="nav-btn" style="width: auto;">Previous</button>
+            <button type="button" id="next-btn" class="nav-btn"style="width: auto;">Next</button>
+            <button type="submit" class="auth-btn"style="width: auto;">Submit Answers</button>
+        </form>
+    </div>
+
+    <script src="audio.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
+
+
+
+
