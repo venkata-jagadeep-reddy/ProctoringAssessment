@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let timeLeft = 600; // 10 minutes in seconds
     let timerElement = document.getElementById("time");
     let currentAudioIndex = 0;
-    const audioElements = ["audio1.mp3", "audio2.mp3", "audio3.mp3", "audio4.mp3", "audio5.mp3"];
+    const audioElements = ["audio1.mp3", "audio2.mp3","audio3.mp3"];
     const questions = document.querySelectorAll(".question");
 
     function updateTimer() {
@@ -20,7 +20,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function showQuestion(index) {
         questions.forEach((question, i) => {
-            question.style.display = (i === index) ? "block" : "none";
+            if (i === index) {
+                question.style.display = "block";
+                i += 3;
+                index += 3;
+            } else {
+                question.style.display = "none";
+            }
+            
             question.style.opacity = (i === index) ? 1 : 0; // Set opacity for fade effect
         });
     }
