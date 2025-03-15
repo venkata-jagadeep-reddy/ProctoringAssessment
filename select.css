@@ -114,4 +114,5 @@ footer {
     .nav-links {
         display: none;
         flex-direction: column;
-       
+    }
+}
