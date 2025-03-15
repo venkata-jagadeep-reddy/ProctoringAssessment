@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <p class="forgot-password"><a href="#" onclick="showForgotPassword()">Forgot Password?</a></p>
-                <button type="submit" class="auth-btn">Login</button>
+                <button type="submit" class="auth-btn" onclick="redirectToPage('select.html')">Login</button>
                 <p class="switch-text">Don't have an account? <a href="#" onclick="toggleForms()">Sign Up</a></p>
             </form>
         </div>
@@ -80,4 +80,9 @@
     </div>
 
 </body>
+<script>
+    function redirectToPage(page){
+        window.location.href=page;
+    }
+</script>
 </html>
