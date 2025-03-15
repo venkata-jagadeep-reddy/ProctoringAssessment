@@ -21,9 +21,12 @@
         <h2>Listen to the audio carefully and answer the following questions</h2>
         <div id="time" class="timer">10:00</div>
 
-        <!-- Audio Player -->
-        <audio id="quiz-audio" controls>
-            <source src="WEB DEVELOPMENT COMPLETE ROADMAP FOR BEGINNERS.mp3" type="audio/mpeg">
+         <!-- Audio Player -->
+         <audio id="quiz-audio" controls>
+            <source src="audio1.mp3" type="audio/mpeg">
+            <source src="audio2.mp3" type="audio/mpeg">
+            <source src="audio3.mp3" type="audio/mpeg">
+           
             Your browser does not support the audio element.
         </audio>
 
@@ -31,15 +34,48 @@
         <form id="quiz-form">
             <!-- Questions for Audio 1 -->
             <div class="question" data-audio="audio1.mp3">
+                <h2> Listen to the audio about AI carefully and answer the following questions</h2>
                 <h3>Question 1: What is the main topic of the audio?</h3>
                 <label><input type="radio" name="q1" value="A"> Option A</label>
                 <label><input type="radio" name="q1" value="B"> Option B</label>
                 <label><input type="radio" name="q1" value="C"> Option C</label>
                 <label><input type="radio" name="q1" value="D"> Option D</label>
             </div>
-            <!-- Repeat for Questions 2-5 for Audio 1 -->
+
+            <div class="question" data-audio="audio2.mp3">
+                <h3>Question 2: What is the main topic of the audio?</h3>
+                <label><input type="radio" name="q2" value="A"> Option A</label>
+                <label><input type="radio" name="q2" value="B"> Option B</label>
+                <label><input type="radio" name="q2" value="C"> Option C</label>
+                <label><input type="radio" name="q2" value="D"> Option D</label>
+            </div>
+
+            <div class="question" data-audio="audio2.mp3">
+                <h3>Question 3: What is the main topic of the audio?</h3>
+                <label><input type="radio" name="q3" value="A"> Option A</label>
+                <label><input type="radio" name="q3" value="B"> Option B</label>
+                <label><input type="radio" name="q3" value="C"> Option C</label>
+                <label><input type="radio" name="q3" value="D"> Option D</label>
+            </div>
+            
 
             <!-- Questions for Audio 2 -->
+            <div class="question" data-audio="audio2.mp3" style="display:none;">
+                <h3>Question 4: What is the main topic of the audio?</h3>
+                <label><input type="radio" name="q4" value="A"> Option A</label>
+                <label><input type="radio" name="q4" value="B"> Option B</label>
+                <label><input type="radio" name="q4" value="C"> Option C</label>
+                <label><input type="radio" name="q4" value="D"> Option D</label>
+            </div>
+
+            <div class="question" data-audio="audio2.mp3" style="display:none;">
+                <h3>Question 5: What is the main topic of the audio?</h3>
+                <label><input type="radio" name="q5" value="A"> Option A</label>
+                <label><input type="radio" name="q5" value="B"> Option B</label>
+                <label><input type="radio" name="q5" value="C"> Option C</label>
+                <label><input type="radio" name="q5" value="D"> Option D</label>
+            </div>
+
             <div class="question" data-audio="audio2.mp3" style="display:none;">
                 <h3>Question 6: What is the main topic of the audio?</h3>
                 <label><input type="radio" name="q6" value="A"> Option A</label>
@@ -47,8 +83,32 @@
                 <label><input type="radio" name="q6" value="C"> Option C</label>
                 <label><input type="radio" name="q6" value="D"> Option D</label>
             </div>
-            <!-- Repeat for Questions 7-10 for Audio 2 -->
+           
+               <!-- Questions for Audio 3 -->
+               <div class="question" data-audio="audio3.mp3" style="display:none;">
+                <h3>Question 7: What is the main topic of the audio?</h3>
+                <label><input type="radio" name="q7" value="A"> Option A</label>
+                <label><input type="radio" name="q7" value="B"> Option B</label>
+                <label><input type="radio" name="q7" value="C"> Option C</label>
+                <label><input type="radio" name="q7" value="D"> Option D</label>
+            </div>
 
+            <div class="question" data-audio="audio2.mp3" style="display:none;">
+                <h3>Question 8: What is the main topic of the audio?</h3>
+                <label><input type="radio" name="q8" value="A"> Option A</label>
+                <label><input type="radio" name="q8" value="B"> Option B</label>
+                <label><input type="radio" name="q8" value="C"> Option C</label>
+                <label><input type="radio" name="q8" value="D"> Option D</label>
+            </div>
+
+            <div class="question" data-audio="audio2.mp3" style="display:none;">
+                <h3>Question 9: What is the main topic of the audio?</h3>
+                <label><input type="radio" name="q9" value="A"> Option A</label>
+                <label><input type="radio" name="q9" value="B"> Option B</label>
+                <label><input type="radio" name="q9" value="C"> Option C</label>
+                <label><input type="radio" name="q9" value="D"> Option D</label>
+            </div>
+           
             <!-- Repeat the structure for Audios 3-5 -->
             <button type="button" id="prev-btn" class="nav-btn" style="width: auto;">Previous</button>
             <button type="button" id="next-btn" class="nav-btn"style="width: auto;">Next</button>
