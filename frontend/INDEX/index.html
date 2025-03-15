@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Risk-Based Proctoring</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        /* Add these new styles for the hero section */
+        .hero {
+            position: relative;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
+                        url('https://images.unsplash.com/photo-1497864149936-d3163f0c0f4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: 0;
+        }
+
+        /* Add media query for mobile */
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 50vh;
+            }
+        }
+        .cs{
+            background-image: url('https://images.unsplash.com/photo-1497864149936-d3163f0c0f4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <div class="logo">ProctorAI</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">&#9776;</div>
+    </nav>
+<div class="cs">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Risk-Based AI Proctoring</h1>
+            <p>Ensuring integrity in online exams with AI-driven behavioral monitoring. No video surveillance, just smart detection.</p>
+            <a href="#features" class="cta-btn">Learn More</a>
+        </div>
+    </section>
+</div>
+
+    <!-- Features Section -->
+    <section id="f">
+        <section id="features" class="features">
+            <h2>Why Choose Our Proctoring System?</h2>
+            <div class="feature-container">
+                <div class="feature-box">
+                    <h3>Drill</h3>
+                    <p>Get all the <b>Training</b> you need.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Test</h3>
+                    <p><b>Evaluate</b> yourself and let us analyze your ability.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>1. Drills</h3>
+                    <p>These analyze your behavioral patterns during your practice and recommend changes to improve yourself.</p>
+                </div>
+                <div class="step">
+                    <h3>2. Tests</h3>
+                    <p>These analyze your behavior and check your sanity as well as your ability.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2 style="color: white;">Get in Touch</h2>
+            <p style="color: white;"><b>Interested in our AI proctoring system? Let's talk!</b></p>
+            <a href="login.html" class="cta-btn">GET STARTED</a>
+        </section>
+    </section> <!-- Closing for #f -->
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 ProctorAI - Ensuring Academic Integrity</p>
+        <div class="social-links">
+            <a href="#">LinkedIn</a> | <a href="#">Twitter</a> | <a href="#">GitHub</a>
+        </div>
+    </footer>
+
+</body>
+</html>

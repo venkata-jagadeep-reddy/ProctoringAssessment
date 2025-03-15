@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password - ProctorAI</title>
+    <link rel="stylesheet" href="reset.css">
+    <script defer src="reset.js"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">ProctorAI</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Reset Password Container -->
+    <div class="auth-container">
+        <div class="form-box reset-password-box">
+            <h2>Reset Your Password</h2>
+            <p>Enter a new password to reset your account access.</p>
+            <form>
+                <div class="input-group">
+                    <label for="new-password">New Password</label>
+                    <div class="password-container">
+                        <input type="password" id="new-password" placeholder="Enter new password" required>
+                        <span class="toggle-password" onclick="toggleNewPassword()">👁️</span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="confirm-new-password">Confirm Password</label>
+                    <div class="password-container">
+                        <input type="password" id="confirm-new-password" placeholder="Confirm new password" required>
+                        <span class="toggle-password" onclick="toggleConfirmPassword()">👁️</span>
+                    </div>
+                </div>
+                <button type="submit" class="auth-btn">Reset Password</button>
+                <p class="switch-text"><a href="login.html">Back to Login</a></p>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

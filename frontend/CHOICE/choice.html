@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Added assessment-specific styles */
+        /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+    color: #333;
+    background-color: rgba(0, 0, 0, 0.2); /* Light background for the starting page */
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1c1c1c; /* Consistent with login page */
+    color: white;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    color: #f90; /* Consistent hover color */
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+        .assessment-section {
+            padding: 80px 20px;
+            background: #fff;
+        }
+
+        .assessment-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .assessment-card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            border-bottom: 4px solid #f90;
+        }
+
+        .assessment-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #f90;
+        }
+
+        .assessment-card h3 {
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .assessment-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Different border colors for each card */
+        .mcq-card { border-color: #4CAF50; }
+        .fillblanks-card { border-color: #2196F3; }
+        .answer-card { border-color: #9C27B0; }
+        .video-card { border-color: #FF5722; }
+        .audio-card { border-color: #E91E63; }
+
+        .start-btn {
+            display: inline-block;
+            padding: 8px 20px;
+            background: #f90;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .start-btn:hover {
+            background: #e68a00;
+        }
+        footer {
+    text-align: center;
+    padding: 20px;
+    background: #222; /* Consistent footer color */
+    color: white;
+    margin-top: 40px;
+}
+
+        /* Rest of your existing CSS remains the same */
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">SkillAssess</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="assessment.html" class="active">Assessments</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Assessment Section -->
+    <div class="assessment-section" style="background-color:#243B55">
+        <div class="features">
+            <h2 style="color: #1c1c1c;">Choose Assessment Type</h2>
+            <div class="assessment-container">
+                <!-- MCQ Card -->
+                <div class="assessment-card mcq-card">
+                    <i class="fas fa-question-circle card-icon"></i>
+                    <h3>Multiple Choice Questions</h3>
+                    <p>Test your knowledge with our comprehensive MCQ assessment. Choose the correct answer from multiple options.</p>
+                    <a href="mcq.html" class="start-btn">Start MCQ</a>
+                </div>
+
+                <!-- Fill in Blanks Card -->
+                <div class="assessment-card fillblanks-card">
+                    <i class="fas fa-pencil-alt card-icon"></i>
+                    <h3>Fill in the Blanks</h3>
+                    <p>Complete the sentences by filling in missing words. Assess your understanding of key concepts.</p>
+                    <a href="fillblanks.html" class="start-btn">Start Exercise</a>
+                </div>
+
+                <!-- Answer Questions Card -->
+                <div class="assessment-card answer-card">
+                    <i class="fas fa-comment-alt card-icon"></i>
+                    <h3>Answer the Following</h3>
+                    <p>Demonstrate your knowledge with detailed written responses to complex questions.</p>
+                    <a href="answer.html" class="start-btn">Begin Assessment</a>
+                </div>
+
+                <!-- Video Assessment Card -->
+                <div class="assessment-card video-card">
+                    <i class="fas fa-video card-icon"></i>
+                    <h3>Video Assessment</h3>
+                    <p>Record video responses to situational questions. Showcase your communication skills.</p>
+                    <a href="video.html" class="start-btn">Start Recording</a>
+                </div>
+
+                <!-- Audio Assessment Card -->
+                <div class="assessment-card audio-card">
+                    <i class="fas fa-microphone-alt card-icon"></i>
+                    <h3>Audio Assessment</h3>
+                    <p>Respond to questions using audio recordings. Test your verbal communication abilities.</p>
+                    <a href="audio.html" class="start-btn">Begin Test</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 SkillAssess. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

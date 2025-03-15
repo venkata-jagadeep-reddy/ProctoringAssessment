@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequential Questions</title>
+    <style>
+        /* Your provided CSS */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #1c1c1c;
+            color: white;
+            padding: 15px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 30px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-links li a:hover {
+            color: #f90;
+        }
+
+        /* Question Container Styles */
+        .assessment-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 100px 20px 20px;
+            background: linear-gradient(to right, #141E30, #243B55);
+        }
+
+        .question-box {
+            background: white;
+            padding: 40px;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            display: none;
+        }
+
+        .question-box.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .question-number {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .question-text {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #222;
+        }
+
+        .input-group {
+            margin-bottom: 30px;
+        }
+
+        .input-group textarea {
+            width: 100%;
+            height: 100px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .auth-btn {
+            background: #f90;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .auth-btn:hover {
+            background: #e68a00;
+        }
+
+        .completion-message {
+            display: none;
+            text-align: center;
+            padding: 40px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Questionnaire</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="assessment-container">
+        <!-- Questions -->
+        <div class="question-box active" data-question="1">
+            <div class="question-number">Question 1 of 5</div>
+            <div class="question-text">How do you get your website online?</div>
+            <div class="input-group">
+                <textarea placeholder="Type your answer here..."></textarea>
+            </div>
+            <div class="nav-buttons">
+                <button class="auth-btn" onclick="nextQuestion(1)">Next Question</button>
+            </div>
+        </div>
+
+        <div class="question-box" data-question="2">
+            <div class="question-number">Question 2 of 5</div>
+            <div class="question-text">What are HTML and CSS?</div>
+            <div class="input-group">
+                <textarea placeholder="Type your answer here..."></textarea>
+            </div>
+            <div class="nav-buttons">
+                <button class="auth-btn" onclick="prevQuestion(2)">Previous</button>
+                <button class="auth-btn" onclick="nextQuestion(2)">Next Question</button>
+            </div>
+        </div>
+
+        <div class="question-box" data-question="3">
+            <div class="question-number">Question 3 of 5</div>
+            <div class="question-text">What's the difference between a designer and a developer?</div>
+            <div class="input-group">
+                <textarea placeholder="Type your answer here..."></textarea>
+            </div>
+            <div class="nav-buttons">
+                <button class="auth-btn" onclick="prevQuestion(3)">Previous</button>
+                <button class="auth-btn" onclick="nextQuestion(3)">Next Question</button>
+            </div>
+        </div>
+
+        <div class="question-box" data-question="4">
+            <div class="question-number">Question 4 of 5</div>
+            <div class="question-text">Name three fundamental principles of object-oriented programming.</div>
+            <div class="input-group">
+                <textarea placeholder="Type your answer here..."></textarea>
+            </div>
+            <div class="nav-buttons">
+                <button class="auth-btn" onclick="prevQuestion(4)">Previous</button>
+                <button class="auth-btn" onclick="nextQuestion(4)">Next Question</button>
+            </div>
+        </div>
+
+        <div class="question-box" data-question="5">
+            <div class="question-number">Question 5 of 5</div>
+            <div class="question-text">What is the significance of the Turing Test in artificial intelligence?</div>
+            <div class="input-group">
+                <textarea placeholder="Type your answer here..."></textarea>
+            </div>
+            <div class="nav-buttons">
+                <button class="auth-btn" onclick="prevQuestion(5)">Previous</button>
+                <button class="auth-btn" onclick="nextQuestion(5)">Submit Answers</button>
+            </div>
+        </div>
+
+        <!-- Completion Message -->
+        <div class="completion-message">
+            <h2>Assessment Complete!</h2>
+            <p>Thank you for completing questions.</p>
+            <button class="auth-btn" onclick="submitAssesment()">submit Assessment</button>
+        </div>
+    </div>
+
+    <script>
+        function nextQuestion(current) {
+            const currentQuestion = document.querySelector(`[data-question="${current}"]`);
+            const nextQuestion = document.querySelector(`[data-question="${current + 1}"]`);
+            
+            if(current === 5) {
+                document.querySelector('.completion-message').style.display = 'block';
+                currentQuestion.classList.remove('active');
+                return;
+            }
+
+            currentQuestion.classList.remove('active');
+            nextQuestion.classList.add('active');
+        }
+
+        function prevQuestion(current) {
+            const currentQuestion = document.querySelector(`[data-question="${current}"]`);
+            const prevQuestion = document.querySelector(`[data-question="${current - 1}"]`);
+            
+            currentQuestion.classList.remove('active');
+            prevQuestion.classList.add('active');
+        }
+    </script>
+</body>
+</html>
