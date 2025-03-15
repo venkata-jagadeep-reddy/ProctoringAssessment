@@ -133,7 +133,7 @@ h2 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease-in-out;
+    /* transition: background 0.3s ease-in-out; */
 }
 
 .auth-btn:hover {
