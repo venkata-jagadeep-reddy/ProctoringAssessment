@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 i += 3;
                 index += 3;
             } else {
-                question.style.display = "none";
+                  question.style.display = "none";
             }
             
             question.style.opacity = (i === index) ? 1 : 0; // Set opacity for fade effect
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("quiz-form").addEventListener("submit", function (event) {
         event.preventDefault();
         alert("Your answers have been submitted successfully!");
-        window.location.href = "index.html"; // Redirect after submission
+        window.location.href = "choice.html"; // Redirect after submission
     });
 
     // Initialize the first question
