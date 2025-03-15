@@ -12,7 +12,6 @@
     <!-- Navigation Bar -->
     <nav>
         <div class="logo">Video Quiz</div>
-        <
     </nav>
 
     <!-- Assessment Container -->
@@ -58,6 +57,14 @@
             <button type="submit" id="submit-btn" class="auth-btn" disabled>Submit Answers</button>
         </form>
     </div>
-
+    <script>
+        function startProctoring() {
+            fetch('/start-proctoring')
+                .then(response => response.json())
+                .then(data => alert(data.message))
+                .catch(error => alert('Failed to start proctoring. Make sure Flask server is running.'));
+        }
+        startProctoring();
+    </script>
 </body>
 </html>
